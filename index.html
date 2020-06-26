@@ -38,7 +38,7 @@
                         <form>
                             <div class="form-group mb-4 mt-4"> <!--mb means margin bottom-->
                                 <input 
-                                id ="lbsinput"
+                                id ="lbsInput"
                                 type="number"
                                 class="form-control form-control-lg"
                                 placeholder="Enter pounds...."
@@ -78,14 +78,16 @@
             </div>
 
             <script>
-                document.getElementById(lbsinput).addEventListener('input',function(){
+                 function myFunction() { 
+            var x =  
+                document.getElementById("lbsInput").value; 
+            
+           // document.getElementById( 
+             // "demo").innerHTML = x; 
+             console.log(123);
 
-                   // let pounds=e.target.value;
-                    console.log(123);
 
-
-
-                });
+        } 
             </script>
 
 
