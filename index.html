@@ -23,31 +23,31 @@
         <style>
             body{
                 margin-top:70px;
-                background:#333;
-                color:rgb(12, 7, 85); 
+                background:#f5f2f2;
+                color:rgb(13, 21, 126); 
             }
         </style>
        
        
         <body>
 
-            <div class="container ">
+            <div class="container " style=" transform: translate(25%,20%);">
                 <div class="row">
                     <div class="col-md-6">
-                        <h1 class="display-4 text-center" style="color:azure;">Weight Converter</h1>
+                        <h1 class="display-4 text-center" style="font-family:Helvetica;">Weight Converter</h1>
                         <form>
                             <div class="form-group mb-4 mt-4"> <!--mb means margin bottom-->
                                 <input 
                                 id ="lbsInput"
                                 type="number"
                                 class="form-control form-control-lg"
-                                placeholder="Enter pounds...."
+                                placeholder="Enter weight in kg"
                                 >
                             </div>
                         </form>
 
                         <div id="output">
-                            <div class="card card-primary mb-2">
+                            <div class="card mb-2">
                                 <div class="card-block">
                                 <h4>Grams : </h4>
                                 <div id="gramsOutput"></div>
@@ -55,15 +55,15 @@
 
                             </div>
 
-                            <div class="card card-success mb-2">
+                            <div class="card mb-2">
                                 <div class="card-block">
-                                <h4>Kilograms : </h4>
-                                <div id="kgOutput"></div>
+                                <h4>Pounds : </h4>
+                                <div id="lbsOutput"></div>
                                 </div>
                             </div>
 
-                            <div class="card card-danger mb-2">
-                                <div class="card-block">
+                            <div class="card mb-2" >
+                                <div class="card-block"style="color:rgb(13, 21, 126);">
                                 <h4>Ounces : </h4>
                                 <div id="ozOutput"></div>
                                 </div>
@@ -80,8 +80,10 @@
             <script>
                 document.getElementById('lbsInput').addEventListener('input',function(e){
              
-                let pounds=e.target.value;
-                document.getElementById('gramsOutput').innerHTML=pounds/0.0022046;
+                let kg=e.target.value;
+                document.getElementById('gramsOutput').innerHTML=kg*1000;
+                document.getElementById('lbsOutput').innerHTML=kg * 2.2046;
+                document.getElementById('ozOutput').innerHTML=kg*35.2739619496;
             //console.log(123);
 
 
